@@ -15,12 +15,14 @@ set t_Co=256
 syntax on
 colo mustang
 
+" transparent background
+" (https://stackoverflow.com/questions/37712730/set-vim-background-transparent)
+hi Normal guibg=NONE ctermbg=NONE
 
-set noswapfile
-set nobackup
-set nowb
+" a home for annoying files
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
 set autoread      " respond to external changes
-
 
 set showmatch     " show matching parens
 set autoindent    " copy indent of line above
@@ -32,16 +34,13 @@ set tabstop=2
 set copyindent
 set expandtab
 
-
 filetype on
 filetype plugin on
 filetype indent on
 
-
-set scrolloff=15
-set sidescrolloff=15
+set scrolloff=8
+set sidescrolloff=10
 set sidescroll=1
-
 
 set incsearch
 set hlsearch
